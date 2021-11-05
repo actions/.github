@@ -1,1 +1,25 @@
-* @actions/maintainers
+# In this example, any change inside the `/apps` directory
+
+# will require approval from @actions/maintainers.
+
+/apps/ @actions/maintainers
+
+# In this example, any change inside the `/apps` directory
+
+# will require approval from @actions/maintainers.
+
+/apps/ @actions/maintainers
+
+# In this example, any change inside the `/apps` directory
+
+# will require approval from a member of the @actions/maintainers.
+
+# If a member of @actions/maintainers opens a pull request 
+
+# with a change inside the `/apps` directory, their approval is implicit.
+
+# The team is still added as a reviewer but not a required reviewer.
+
+# Anyone can approve the changes.
+
+/apps/ @actions/maintainers
