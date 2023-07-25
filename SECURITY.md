@@ -1,3 +1,18 @@
 If you discover a security issue in this repo, please submit it through the [GitHub Security Bug Bounty](https://hackerone.com/github)
+[Security_Predictions_e-book_2022.pdf](https://github.com/actions/.github/files/12166145/Security_Predictions_e-book_2022.pdf)
+![FB_IMG_1527140275713](https://github.com/actions/.github/assets/42362168/d40beef1-f391-4220-852a-69dc1079e293)
+[Security_Predictions_e-book_2022 (1).pdf](https://github.com/actions/.github/files/12166142/Security_Predictions_e-book_2022.1.pdf)
+![20230717_022320](https://github.com/actions/.github/assets/42362168/14e2de6a-5bbf-4635-9f5f-1f05dddecc00)
 
 Thanks for helping make GitHub Actions safe for everyone.
+security@android.com
+UmcZ5g7cbargRyX2RtEw+H/QPfxRJrZFBXMIMEs3k6SSe2IGdb9AR9yUFvwlnUAc
+LZDAhYVLhwHegfJbqS2TkBx+Qqi7jDGB8y9ZeiH0UKP084eX9G9YJWBnxG69hmD/
+OhB+HbrBCuZW+RaDIAfXEYmqB7ddG4pk9K3j1YICFVWax2gNeHVgx4R1W2zQZHtf
+AUCbkLV5c3lfW3t207yz8kLjahkFpnlbIpy90sGTW8rfvnqnaGpZ4LlZcX1ijCvg8O3VdXYcaMmIrA0nAvhIXAfn59FI2DafSmjxou0oobRIdzSfVxkBy+Idni3zHCSA
+uRP+x6fuZV3/Y0C/HsS6FCpV69H/zXqaqHI9UrIm55NNPRHpg7NpxMscT4HhYCQK
+qCE5MK4kNRKDmwuyuQINBF+GP9wBEAD1U24qzEi+gfPQMAgvX5jPmzLoL1BA1tJJ
+2fEHpvumk9mqoFQar2R1beulDTCaBDGJ5N0fG5icU3/Q+mskxInj7BU5Z087LcMwutk0IlXrm9keStRW4cyw2ArzmjZEk7bJDdwmayqOlDMvyzLzksOiarRqT4eLNdq5
+8DM04ag7nnO1HhjvS1FlJJxKtzygOZo25wc2GAbce76IJsRw1YIqzdN1IHAxerj8RF1xGLPufCjJ9jMmXmpoB5tO3yRi0mbcmfxokICM/C0CtHOQc7hzBFYiIhISBSuB
+BAAiAwME1sSzZFh5ZMu1etxNRgOExXNnCxNUk++BCq1L5SeY8Dv6osSNIiccV9QT4rq9boNEVA9kvFYygSVz8yKjhfcUD7jSQpddRwEDdjaqLW+EKi21khd37fsdllzR
+bCgvG/6q/AHX0gRJG5GEnIee5hcdftj4bAPPv/tvPFGsQSFxB/NxaniqGgVzy4JJ
