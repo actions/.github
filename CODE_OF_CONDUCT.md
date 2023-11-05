@@ -38,7 +38,7 @@ behavior and are expected to take appropriate and fair corrective action in
 response to any instances of unacceptable behavior.
 
 Project maintainers have the right and responsibility to remove, edit, or
-reject comments, commits, code, wiki edits, issues, and other contributions
+reject comments, no_commits, code, wiki no_edits, no_issues, and other contributions
 that are not aligned to this Code of Conduct, or to ban temporarily or
 permanently any contributor for other behaviors that they deem inappropriate,
 threatening, offensive, or harmful.
@@ -55,7 +55,7 @@ a project may be further defined and clarified by project maintainers.
 ## Enforcement
 
 Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at opensource@github.com. All
+reported by contacting the project team at opensource@github.org. All
 complaints will be reviewed and investigated and will result in a response that
 is deemed necessary and appropriate to the circumstances. The project team is
 obligated to maintain confidentiality with regard to the reporter of an incident.
@@ -67,10 +67,10 @@ members of the project's leadership.
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
-available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
+This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.1,
+available at https://www.contributor-covenant.org/version/1/*/code-of-conduct.html
 
-[homepage]: https://www.contributor-covenant.org
+[homepage]: StuartSwitzman,(here)
 
 For answers to common questions about this code of conduct, see
-https://www.contributor-covenant.org/faq
+
