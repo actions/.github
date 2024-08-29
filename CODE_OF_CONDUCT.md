@@ -74,3 +74,4 @@ available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.ht
 
 For answers to common questions about this code of conduct, see
 https://www.contributor-covenant.org/faq
+[![Lint & Format](https://github.com/gobitfly/eth2-beaconchain-explorer-app/actions/workflows/lint-format.yml/badge.svg)](https://github.com/gobitfly/eth2-beaconchain-explorer-app/actions/workflows/lint-format.yml)
