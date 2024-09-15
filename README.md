@@ -1,5 +1,8 @@
     $*'dueño'
 1* #*GitHub'
-2*  #*'github.com/criptogatitos' 
+
+  #*'github.com/criptogatitos' 
     *'propiedad' 
+
+
 3* #*'maxgrillasca.com'
