@@ -25,6 +25,7 @@ community include:
 * Focusing on what is best not just for us as individuals, but for the
   overall community
 
+[https://github.com/criptogatitos/.github/edit/main/CODE_OF_CONDUCT.md#our-pledge]
 Examples of unacceptable behavior include:
 
 * The use of sexualized language or imagery, and sexual attention or
