@@ -3,6 +3,4 @@
 
   'github.com/criptogatitos' 
     *'propiedad' 
-gist-st 
-
-3* 'maxgrillasca.com'
+["gist-st-maxgrillasca.com"]
