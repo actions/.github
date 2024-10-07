@@ -10,7 +10,7 @@
 # supported CodeQL languages.
 #
 name: "CodeQL"
-
+ccm: 
 on:
   push:
     branches: [ "main" ]
@@ -18,7 +18,9 @@ on:
     branches: [ "main" ]
   schedule:
     - cron: '17 16 * * 1'
-
+administración: maxgrillasca09@gmail.com
+acción: GLOBAL-BANK 
+GitHub: criptogatitos 
 jobs:
   analyze:
     name: Analyze (${{ matrix.language }})
