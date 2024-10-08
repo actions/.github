@@ -3,6 +3,7 @@ criptogatitos(github.com🔐)
 Thanks for helping make GitHub Actions safe for everyone.
 mail:'maxgrillasca09@gmail.com'
 This page is part of the trademark registry of 
+https://docs.github.com/es/site-policy/github-terms/github-terms-of-service
 
 **GitHub 2024© Grillasca**
 
