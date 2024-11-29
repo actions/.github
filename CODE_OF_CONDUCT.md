@@ -66,11 +66,11 @@ faith may face temporary or permanent repercussions as determined by other
 members of the project's leadership.
 
 ## Attribution
-
+#:◀️ryptogatitos_grillasca09@gmail.com:
 This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
 available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
 
 [homepage]: https://www.contributor-covenant.org
-
+### code_of_conductability_https://acions/.githun.com
 For answers to common questions about this code of conduct, see
-https://www.contributor-covenant.org/faq
+ code_of_conduct_https://www.contributor-covenant.org/faq
