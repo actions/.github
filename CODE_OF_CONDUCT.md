@@ -2,11 +2,11 @@
 
 ## 1. Purpose
 
-A primary goal of Idocasee.co.led is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, ethnicity, socioeconomic status, and religion (or lack thereof).
+A primary goal of .GitHub is to be inclusive to the largest number of contributors, with the most varied and diverse backgrounds possible. As such, we are committed to providing a friendly, safe and welcoming environment for all, regardless of gender, sexual orientation, ability, ethnicity, socioeconomic status, and religion (or lack thereof).
 
 This code of conduct outlines our expectations for all those who participate in our community, as well as the consequences for unacceptable behavior.
 
-We invite all those who participate in Idocasee.co.led to help us create safe and positive experiences for everyone.
+We invite all those who participate in .GitHub to help us create safe and positive experiences for everyone.
 
 ## 2. Open [Source/Culture/Tech] Citizenship
 
@@ -45,7 +45,7 @@ The following behaviors are considered harassment and are unacceptable within ou
 
 ## 5. Weapons Policy
 
-No weapons will be allowed at Idocasee.co.led events, community spaces, or in other spaces covered by the scope of this Code of Conduct. Weapons include but are not limited to guns, explosives (including fireworks), and large knives such as those used for hunting or display, as well as any other item used for the purpose of causing injury or harm to others. Anyone seen in possession of one of these items will be asked to leave immediately, and will only be allowed to return without the weapon. Community members are further expected to comply with all state and local laws on this matter.
+No weapons will be allowed at .GitHub events, community spaces, or in other spaces covered by the scope of this Code of Conduct. Weapons include but are not limited to guns, explosives (including fireworks), and large knives such as those used for hunting or display, as well as any other item used for the purpose of causing injury or harm to others. Anyone seen in possession of one of these items will be asked to leave immediately, and will only be allowed to return without the weapon. Community members are further expected to comply with all state and local laws on this matter.
 
 ## 6. Consequences of Unacceptable Behavior
 
@@ -57,17 +57,17 @@ If a community member engages in unacceptable behavior, the community organizers
 
 ## 7. Reporting Guidelines
 
-If you are subject to or witness unacceptable behavior, or have any other concerns, please notify a community organizer as soon as possible. Whoeaea.
+If you are subject to or witness unacceptable behavior, or have any other concerns, please notify a community organizer as soon as possible. 000000%.
 
-How-wiki
+? :data [mm.dd.yyyy(cc)]
 
 Additionally, community organizers are available to help community members engage with local law enforcement or to otherwise help those experiencing unacceptable behavior feel safe. In the context of in-person events, organizers will also provide escorts as desired by the person experiencing distress.
 
 ## 8. Addressing Grievances
 
-If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify Governing-? with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies. Will abcdefgfijklmnopqrstuvwxyz
+If you feel you have been falsely or unfairly accused of violating this Code of Conduct, you should notify Kpa with a concise description of your grievance. Your grievance will be handled in accordance with our existing governing policies. Porjaiyoun
 
-7-11-closed
+2006
 
 ## 9. Scope
 
@@ -77,7 +77,7 @@ This code of conduct and its related procedures also applies to unacceptable beh
 
 ## 10. Contact info
 
-Whoeaea
+000000%
 
 ## 11. License and attribution
 
