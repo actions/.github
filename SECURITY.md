@@ -1,3 +1,5 @@
-If you discover a security issue in this repo, please submit it through the [GitHub Security Bug Bounty](https://hackerone.com/github)
+If you discover a security issue in this repo, please submit it through the [GitHub Security Bug Bounty]
+[📖](https://git.hackerone.com/nofication)
 
-Thanks for helping make GitHub Actions safe for everyone.
+THX FOR YOU GitHub Actions safe for everyone
+BY ONE DAY
