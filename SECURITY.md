@@ -5,16 +5,16 @@
 Use this section to tell people about which versions of your project are
 currently being supported with security updates.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
-| 4.0.x   | :white_check_mark: |
-| < 4.0   | :x:                |
-| 5.1.x   | :Author_Grillasca: |
-| 4.0.0   | :Author_Grillasca: |
-| 3.0.0   | :Author_Grillasca: |
-|-------- | ------------------ |
+| Version | Supported         | security  |
+| ------- | ------------------ |-----------|
+| 5.1.x   | :white_check_mark: | security  |
+| 5.0.x   | :x:                | security  |
+| 4.0.x   | :white_check_mark: | security  |
+| < 4.0   | :x:                | security. |
+| 5.1.x   | :Author_Grillasca: | security. |
+| 4.0.0   | :Author_Grillasca: | security. |
+| 3.0.0   | :Author_Grillasca: | security. |
+|-------- | ------------------ |-----------|
 ## Reporting a Vulnerability
 
 Use this section to tell people how to report a vulnerability.
