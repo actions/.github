@@ -1,0 +1,45 @@
+"ghcr.io/juan-ayala/devcontainer-features/aem-repo-tool:1":
+```
+{
+ {
+  "jsonrpc": "2.0",
+  "id": 1,
+  "method": "initialize",
+  "params": {
+    "protocolVersion": "2025-11-25",
+    "capabilities": {
+      "roots": {
+        "listChanged": true
+      },
+      "sampling": {},
+      "elicitation": {
+        "form": {},
+        "url": {}
+      },
+      "tasks": {
+        "requests": {
+          "elicitation": {
+            "create": {}
+          },
+          "sampling": {
+            "createMessage": {}
+          }
+        }
+      }
+    },
+    "clientInfo": {
+      "name": "ExampleClient",
+      "title": "Example Client Display Name",
+      "version": "1.0.0",
+      "description": "An example MCP client application",
+      "icons": [
+        {
+          "src": "https://example.com/icon.png",
+          "mimeType": "image/png",
+          "sizes": ["48x48"]
+        }
+      ],
+      "websiteUrl": "https://example.com"
+    }
+  }
+}
