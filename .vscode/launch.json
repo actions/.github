@@ -1,0 +1,23 @@
+
+{
+    // Sử dụng IntelliSense để khám phá các thuộc tính có thể có.
+    // Di chuột qua các thuộc tính hiện có để xem mô tả liên quan.
+    // Xem thêm thông tin tại https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Attach to Chrome",
+            "port": 9222,
+            "request": "attach",
+            "type": "chrome",
+            "webRoot": "${workspaceFolder}"
+        },
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Khởi động Chrome với \"localhost\"",
+            "url": "http://localhost:8080",
+            "webRoot": "${workspaceFolder}"
+        }
+    ]
+}
