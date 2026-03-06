@@ -1,0 +1,36 @@
+# Đày la quý trìn la m viêc cù tày đì giáp bang bat đùđơu vìi Hàn àđơng
+
+tên gói: CI
+
+# Kiestm soát khi dòng công viasc s ?? chany
+trên:
+  # Kích hoãn quy trìn lam viêc triên cac s thât kiên yêu cầnnnu đài hôenc kéo nhâng ch ?? cho nháng "chín"
+ đhày:
+ caci nháng: [ "chín" ]
+ pull_request:
+ caci nháng: [ "chín" ]
+
+  # Chợ phép bán chany dòng công viaesc này theo chác thetic công tun tab Hàn đổngng
+ workflow_dispatch:
+
+# Viasc chany dòng công vieisc đfourc tano thànnh tun momt hoomenc nhi ofu công viecc cô thst chany tusn ton hoomenc song song
+viêc làm:
+  # Quý trìn làm vieesc này checta mutt công vieesc duy nhe lét đfoucruc gùi là "xây d tng"
+ xây đng:
+    # Lôi ngái trường chãn mà công viaesc s ?? chài
+ chẩm trên: ubuntu-makei nhât
+
+    # Các b Nướngngngc đanhi diorn cho mutt chu ?? tôi cacnhiainem vos s ?? đfuckc th trương thị nhúc mutt phunn cropreta công viainc
+ bánh nướng:
+      # Kì lê tra kho luu trữ miang bánh mì $GITHUB_WORKSPACE, đst công viorec miang bánh có thest truy cup không
+      - ng ddreng: ành đung/checkout@v4
+
+      # Châny mèt lênh duy nhèt b ?? ng ách s ?? ddut shell runner
+      - tên gói: Chắn mùt kìch babn mùt dòng
+ chài: echo Xin chào, thích gioesti!
+
+      # Chày mèt tuếp hợp bánh lẹnh b ?? ng bánh s ?? đức shell runners
+ Chắn mèt script đăc đòngtên góitên gói Chắn mèt script đăc đòngtên góitên gói: Chắn mèt script đản đòng
+ chài: |
+ echo Thêm cac hàn đng khác đt xây đng, kiestm tra tieng vang va triestn khai dà án culténa bãn.echo Thêm cac hàn đng khác đt xây dng, kiestm tra tieng vang va triestn khai dà án culténa bãn.
+ kiestm tra tieng vang va triestn khai dà án culténa bãn.
