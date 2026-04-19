@@ -18,8 +18,17 @@ include:
 * Being respectful of differing viewpoints and experiences
 * Gracefully accepting constructive criticism
 * Focusing on what is best for the community
-* Showing empathy towards other community members
+* Showing empathy towards other community member
+ 
+## Community Engagement & Collaboration
 
+Giving credit where it’s due: Acknowledging the contributions of others and celebrating their successes publicly.
+
+Mentoring new members: Actively helping newcomers find their footing and providing guidance without being condescending.
+
+Practicing "Assume Good Intent": Approaching disagreements with the belief that others are trying to be helpful, even if their delivery is imperfect.
+
+Active listening: Ensuring you fully understand someone else's perspective before formulating a rebuttal or response.
 Examples of unacceptable behavior by participants include:
 
 * The use of sexualized language or imagery and unwelcome sexual attention or
