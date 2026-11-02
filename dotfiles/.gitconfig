@@ -1,0 +1,50 @@
+# NOTE:
+#   Update the following user name and email before using git.
+#   These are placeholders and should be replaced with your actual identity.
+[user]
+	name = CHANGE_ME_NAME
+	email = CHANGE_ME_EMAIL@example.com
+
+[core]
+	editor = vim
+	autocrlf = input
+	excludesfile = ~/.gitignore_global
+
+[init]
+	defaultBranch = main
+
+[color]
+	ui = auto
+
+[alias]
+	st = status
+	co = checkout
+	br = branch
+	ci = commit
+	unstage = reset HEAD --
+	last = log -1 HEAD
+	visual = log --graph --oneline --decorate --all
+	amend = commit --amend
+	undo = reset --soft HEAD^
+
+[pull]
+	rebase = false
+
+[push]
+	default = simple
+
+[credential]
+	helper = cache --timeout=3600
+
+[diff]
+	tool = vimdiff
+
+[merge]
+	tool = vimdiff
+	conflictstyle = diff3
+
+[fetch]
+	prune = true
+
+[log]
+	date = relative

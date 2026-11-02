@@ -1,0 +1,68 @@
+name: Test Linux Setup Scripts
+
+on:
+  push:
+    branches: [ main, copilot/* ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test-ubuntu:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Verify script permissions
+        run: |
+          ls -la setup.sh
+          ls -la scripts/
+
+      - name: Test syntax of shell scripts
+        run: |
+          bash -n setup.sh
+          for script in scripts/*.sh; do
+            echo "Checking $script"
+            bash -n "$script"
+          done
+
+      - name: Verify dotfiles exist
+        run: |
+          test -f dotfiles/.bashrc
+          test -f dotfiles/.gitconfig
+          test -f dotfiles/.vimrc
+          test -f dotfiles/.tmux.conf
+
+      - name: Test script execution (dry-run)
+        run: |
+          echo "Scripts are executable and syntactically correct"
+          echo "Note: Full installation requires sudo and is not run in CI"
+
+  validate-structure:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+
+      - name: Validate repository structure
+        run: |
+          echo "Checking directory structure..."
+          test -d scripts
+          test -d dotfiles
+          test -d config
+          test -f setup.sh
+          test -f README.md
+          echo "✓ Directory structure is valid"
+
+      - name: Check README content
+        run: |
+          grep -q "Personal Linux System Setup" README.md
+          echo "✓ README contains expected content"

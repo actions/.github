@@ -1,0 +1,43 @@
+# Package list for personal Linux system setup
+# One package per line, comments start with #
+
+# Essential utilities
+curl
+wget
+git
+vim
+neovim
+tmux
+htop
+tree
+ncdu
+zip
+unzip
+jq
+
+# Build tools
+build-essential
+make
+gcc
+g++
+
+# Development languages
+nodejs
+npm
+python3
+python3-pip
+
+# Container tools
+docker
+docker-compose
+
+# Version control and collaboration
+gh
+
+# Optional: Uncomment to install
+# terraform
+# kubectl
+# ansible
+# postgresql
+# redis-tools
+# nginx

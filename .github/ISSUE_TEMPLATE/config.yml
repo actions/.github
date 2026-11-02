@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Security Issues
+    url: https://hackerone.com/github
+    about: Please report security vulnerabilities through the GitHub Security Bug Bounty.
+  - name: GitHub Actions Questions
+    url: https://github.community/c/code-to-cloud/github-actions
+    about: Ask questions about GitHub Actions on the Community Forum.

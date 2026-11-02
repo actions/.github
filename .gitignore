@@ -1,0 +1,41 @@
+# Temporary files
+*.tmp
+*.log
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Backup files
+*.backup
+*.bak
+*.old
+
+# IDE and editor files
+.vscode/
+.idea/
+*.sublime-*
+
+# OS files
+Thumbs.db
+Desktop.ini
+
+# Build artifacts
+dist/
+build/
+*.pyc
+__pycache__/
+node_modules/
+
+# Local configuration
+.env
+.env.local
+*.local
+
+# Test output
+test-results/
+coverage/
+
+# Temporary directories
+tmp/
+temp/

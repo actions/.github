@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aviator AI Pro Lab - Strategy Optimizer & Simulator</title>
+    <meta name="description" content="Advanced Aviator game simulator with AI-powered strategy optimization, backtesting engine, and risk analytics.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="app-header">
+        <div class="logo">
+            <div class="logo-icon">A</div>
+            <div>
+                <h1>Aviator AI Pro Lab</h1>
+                <div class="subtitle">Strategy Optimizer & Simulator</div>
+            </div>
+        </div>
+        <div class="header-actions">
+            <span id="simStatus" class="status-badge">READY</span>
+        </div>
+    </header>
+
+    <div class="app-container">
+        <!-- Stats Bar -->
+        <div class="stats-bar">
+            <div class="stat-card">
+                <div class="stat-label">Bankroll</div>
+                <div id="currentBankroll" class="stat-value">$1000.00</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Total Profit</div>
+                <div id="totalProfit" class="stat-value">+$0.00</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Win Rate</div>
+                <div id="winRate" class="stat-value">0.0%</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">Rounds</div>
+                <div id="totalRounds" class="stat-value">0</div>
+            </div>
+        </div>
+
+        <!-- Multiplier + Controls -->
+        <div class="multiplier-section">
+            <div id="multiplierDisplay" class="multiplier-display">
+                <div class="multiplier-label">Current Multiplier</div>
+                <div id="multiplierValue">1.00x</div>
+            </div>
+            <div class="controls-panel">
+                <h3 style="margin-bottom: 1rem;">Simulation Controls</h3>
+                <div class="controls-row">
+                    <div class="control-group">
+                        <label>Starting Bankroll ($)</label>
+                        <input type="number" id="bankrollInput" value="1000" min="10" step="100">
+                    </div>
+                    <div class="control-group">
+                        <label>Backtest Rounds</label>
+                        <input type="number" id="backtestRounds" value="500" min="10" max="10000" step="50">
+                    </div>
+                    <div class="control-group">
+                        <label>Sim Speed: <span id="speedValue">100ms</span></label>
+                        <input type="range" id="simSpeed" min="10" max="1000" value="100" step="10">
+                    </div>
+                </div>
+                <div class="btn-group">
+                    <button id="startSim" class="btn btn-primary">Start Live Sim</button>
+                    <button id="stopSim" class="btn btn-danger" disabled>Stop</button>
+                    <button id="resetSim" class="btn btn-secondary">Reset</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Strategy Selection -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Select Strategy</h3>
+            </div>
+            <div class="card-body">
+                <div id="strategyGrid" class="strategy-grid"></div>
+                <div id="strategyParams"></div>
+            </div>
+        </div>
+
+        <!-- Tabs: Backtest / Optimizer / Comparison -->
+        <div class="card">
+            <div class="tab-group">
+                <button class="tab-btn active" data-tab="backtestTab">Backtest</button>
+                <button class="tab-btn" data-tab="optimizerTab">AI Optimizer</button>
+                <button class="tab-btn" data-tab="comparisonTab">Strategy Comparison</button>
+            </div>
+            <div class="card-body">
+                <div id="backtestTab" class="tab-content active">
+                    <div style="display: flex; gap: 12px; margin-bottom: 1.5rem;">
+                        <button id="runBacktest" class="btn btn-primary">Run Backtest</button>
+                    </div>
+                    <div id="backtestLoading" class="loading-overlay">
+                        <div class="spinner"></div>
+                        <span>Running backtest simulation...</span>
+                    </div>
+                    <div id="backtestResults" class="no-data">
+                        Select a strategy and click "Run Backtest" to see results.
+                    </div>
+                </div>
+
+                <div id="optimizerTab" class="tab-content">
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">
+                        The AI optimizer tests multiple parameter combinations to find the best-performing configuration for your selected strategy.
+                    </p>
+                    <div style="display: flex; gap: 12px; margin-bottom: 1.5rem;">
+                        <button id="optimizeStrategy" class="btn btn-primary">Run AI Optimizer</button>
+                    </div>
+                    <div id="optimizerLoading" class="loading-overlay">
+                        <div class="spinner"></div>
+                        <span>AI optimizing parameters (80 iterations)...</span>
+                    </div>
+                    <div id="optimizerResults" class="no-data">
+                        Click "Run AI Optimizer" to find the best parameters for your selected strategy.
+                    </div>
+                </div>
+
+                <div id="comparisonTab" class="tab-content">
+                    <p style="color: var(--text-secondary); margin-bottom: 1rem; font-size: 0.9rem;">
+                        Compare all strategies head-to-head on the same crash data to see which performs best.
+                    </p>
+                    <div style="display: flex; gap: 12px; margin-bottom: 1.5rem;">
+                        <button id="runComparison" class="btn btn-primary">Run Comparison</button>
+                    </div>
+                    <div id="comparisonLoading" class="loading-overlay">
+                        <div class="spinner"></div>
+                        <span>Running strategy comparison...</span>
+                    </div>
+                    <div class="chart-container" style="height: 350px;">
+                        <canvas id="comparisonChart"></canvas>
+                    </div>
+                    <div id="comparisonTable"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Grid -->
+        <div class="charts-grid">
+            <div class="card">
+                <div class="card-header">
+                    <h3>Bankroll Over Time</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="profitChart"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <h3>Crash Distribution</h3>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container">
+                        <canvas id="distributionChart"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Crash History Chart -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Crash History (Last 50)</h3>
+            </div>
+            <div class="card-body">
+                <div class="chart-container" style="height: 220px;">
+                    <canvas id="crashChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Round History Table -->
+        <div class="card">
+            <div class="card-header">
+                <h3>Round History</h3>
+            </div>
+            <div class="card-body">
+                <div class="history-scroll">
+                    <table class="history-table">
+                        <thead>
+                            <tr>
+                                <th>Round</th>
+                                <th>Crash</th>
+                                <th>Bet</th>
+                                <th>Cash Out</th>
+                                <th>Result</th>
+                                <th>Profit</th>
+                            </tr>
+                        </thead>
+                        <tbody id="historyBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer">
+            <strong>Disclaimer:</strong> This is a simulation tool for educational purposes only. No real money is involved.
+            Past simulated performance does not guarantee future results. Gambling involves risk.
+        </div>
+    </div>
+
+    <script src="js/engine.js"></script>
+    <script src="js/strategies.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

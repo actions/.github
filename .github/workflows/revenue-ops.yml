@@ -1,0 +1,98 @@
+name: Revenue Ops Automation
+
+on:
+  workflow_dispatch:
+    inputs:
+      environment:
+        description: "Target environment"
+        required: true
+        default: "production"
+        type: choice
+        options:
+          - production
+          - staging
+      run_settlement_reconciliation:
+        description: "Run settlement reconciliation checks"
+        required: true
+        default: true
+        type: boolean
+  schedule:
+    - cron: "15 * * * *"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: revenue-ops-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  provider-health:
+    runs-on: ubuntu-latest
+    environment: ${{ github.event.inputs.environment || 'production' }}
+    steps:
+      - name: Validate required baseline configuration
+        run: |
+          missing=0
+          for var in BILLING_PROVIDER CRM_PROVIDER ANALYTICS_PROVIDER DEFAULT_CURRENCY; do
+            if [ -z "${!var}" ]; then
+              echo "Missing variable: $var"
+              missing=1
+            fi
+          done
+
+          if [ "$missing" -eq 1 ]; then
+            echo "One or more required variables are missing."
+            exit 1
+          fi
+
+          echo "Baseline configuration validated."
+        env:
+          BILLING_PROVIDER: ${{ vars.BILLING_PROVIDER }}
+          CRM_PROVIDER: ${{ vars.CRM_PROVIDER }}
+          ANALYTICS_PROVIDER: ${{ vars.ANALYTICS_PROVIDER }}
+          DEFAULT_CURRENCY: ${{ vars.DEFAULT_CURRENCY }}
+
+      - name: Stripe API health check (optional)
+        if: ${{ secrets.STRIPE_API_KEY != '' }}
+        run: |
+          curl -sS https://api.stripe.com/v1/balance \
+            -u "${STRIPE_API_KEY}:" > /tmp/stripe-response.json
+          test -s /tmp/stripe-response.json
+          echo "Stripe API responded successfully."
+        env:
+          STRIPE_API_KEY: ${{ secrets.STRIPE_API_KEY }}
+
+      - name: Paddle API health check (optional)
+        if: ${{ secrets.PADDLE_API_KEY != '' }}
+        run: |
+          status_code=$(curl -sS -o /tmp/paddle-response.json -w "%{http_code}" \
+            -H "Authorization: Bearer ${PADDLE_API_KEY}" \
+            https://api.paddle.com/notification-settings)
+
+          if [ "$status_code" -lt 200 ] || [ "$status_code" -ge 400 ]; then
+            echo "Paddle API check failed with status: $status_code"
+            exit 1
+          fi
+
+          echo "Paddle API responded successfully."
+        env:
+          PADDLE_API_KEY: ${{ secrets.PADDLE_API_KEY }}
+
+  settlement-reconciliation:
+    if: ${{ github.event_name == 'schedule' || github.event.inputs.run_settlement_reconciliation == 'true' }}
+    needs: provider-health
+    runs-on: ubuntu-latest
+    steps:
+      - name: Generate reconciliation summary
+        run: |
+          echo "Revenue settlement reconciliation stub"
+          echo "Date: $(date -u +%Y-%m-%dT%H:%M:%SZ)"
+          echo "Billing provider: ${BILLING_PROVIDER}"
+          echo "Default currency: ${DEFAULT_CURRENCY}"
+          echo "Threshold alert: ${REVENUE_ALERT_THRESHOLD:-not-set}"
+          echo "Integrate your finance data pull script here."
+        env:
+          BILLING_PROVIDER: ${{ vars.BILLING_PROVIDER }}
+          DEFAULT_CURRENCY: ${{ vars.DEFAULT_CURRENCY }}
+          REVENUE_ALERT_THRESHOLD: ${{ vars.REVENUE_ALERT_THRESHOLD }}
