@@ -1,76 +1,403 @@
-# Contributor Covenant Code of Conduct
+bunny spammer html
+<div class="app">
+  <header>
+    <h1>🐰 BUNNY HUB</h1>
+    <p>RGB CUSTOMIZER • LIFE TOGETHER</p>
+    <span class="version">VERSION 10.0</span>
+  </header>
 
-## Our Pledge
+  <section class="panel">
+    <h2>🌈 RGB SETTINGS</h2>
+    <button id="rgbToggle">RGB ON</button>
+    <div class="color-preview" id="colorPreview"></div>
+  </section>
 
-In the interest of fostering an open and welcoming environment, we as
-contributors and maintainers pledge to make participation in our project and
-our community a harassment-free experience for everyone, regardless of age, body
-size, disability, ethnicity, sex characteristics, gender identity and expression,
-level of experience, education, socio-economic status, nationality, personal
-appearance, race, religion, or sexual identity and orientation.
+  <section class="panel">
+    <h2>🚗 RGB VEHICLE</h2>
+    <input id="vehicleName" placeholder="Vehicle name">
+    <button onclick="preview('vehicle')">Preview Vehicle</button>
+    <p id="vehicleResult">No vehicle selected</p>
+  </section>
 
-## Our Standards
+  <section class="panel">
+    <h2>📱 PHONE CUSTOMIZER</h2>
+    <input id="phoneText" placeholder="Enter phone text">
+    <button onclick="preview('phone')">Preview Phone</button>
+    <p id="phoneResult">Phone preview</p>
+  </section>
 
-Examples of behavior that contributes to creating a positive environment
-include:
+  <section class="panel">
+    <h2>✨ RGB BIO</h2>
+    <textarea id="bioText" placeholder="Write your bio..."></textarea>
+    <button onclick="preview('bio')">Preview Bio</button>
+    <p id="bioResult">Your bio preview</p>
+  </section>
 
-* Using welcoming and inclusive language
-* Being respectful of differing viewpoints and experiences
-* Gracefully accepting constructive criticism
-* Focusing on what is best for the community
-* Showing empathy towards other community members
+  <section class="panel">
+    <h2>🎨 RGB NAME</h2>
+    <input id="nameText" placeholder="Enter your name">
+    <button onclick="preview('name')">Preview Name</button>
+    <p id="nameResult">Your name</p>
+  </section>
 
-Examples of unacceptable behavior by participants include:
+  <section class="panel">
+    <h2>💬 MESSAGE DEMO</h2>
+    <textarea id="spamText" placeholder="Write your custom message..."></textarea>
 
-* The use of sexualized language or imagery and unwelcome sexual attention or
-  advances
-* Trolling, insulting/derogatory comments, and personal or political attacks
-* Public or private harassment
-* Publishing others' private information, such as a physical or electronic
-  address, without explicit permission
-* Other conduct which could reasonably be considered inappropriate in a
-  professional setting
+    <label>Preview speed</label>
+    <input type="range" id="speed" min="1" max="5" value="2">
+    <p id="speedValue">Speed: 2</p>
 
-## Our Responsibilities
+    <div class="buttons">
+      <button id="startBtn">START</button>
+      <button id="stopBtn">STOP</button>
+    </div>
 
-Project maintainers are responsible for clarifying the standards of acceptable
-behavior and are expected to take appropriate and fair corrective action in
-response to any instances of unacceptable behavior.
+    <p id="status">Status: Stopped</p>
+    <div id="messageList" class="message-list"></div>
+  </section>
 
-Project maintainers have the right and responsibility to remove, edit, or
-reject comments, commits, code, wiki edits, issues, and other contributions
-that are not aligned to this Code of Conduct, or to ban temporarily or
-permanently any contributor for other behaviors that they deem inappropriate,
-threatening, offensive, or harmful.
+  <section class="panel">
+    <h2>📋 MY LIST</h2>
+    <input id="listInput" placeholder="Add something to your list">
+    <button id="addBtn">ADD TO LIST</button>
+    <ul id="myList"></ul>
+  </section>
 
-## Scope
+  <footer>
+    <p>🐰 BUNNY HUB © 2026</p>
+    <p>Made for customization previews</p>
+  </footer>
+</div>
 
-This Code of Conduct applies within all project spaces, and it also applies when
-an individual is representing the project or its community in public spaces.
-Examples of representing a project or community include using an official
-project e-mail address, posting via an official social media account, or acting
-as an appointed representative at an online or offline event. Representation of
-a project may be further defined and clarified by project maintainers.
+css
+* {
+  box-sizing: border-box;
+}
 
-## Enforcement
+body {
+  margin: 0;
+  padding: 20px 12px;
+  background: #090711;
+  color: white;
+  font-family: Arial, sans-serif;
+}
 
-Instances of abusive, harassing, or otherwise unacceptable behavior may be
-reported by contacting the project team at opensource@github.com. All
-complaints will be reviewed and investigated and will result in a response that
-is deemed necessary and appropriate to the circumstances. The project team is
-obligated to maintain confidentiality with regard to the reporter of an incident.
-Further details of specific enforcement policies may be posted separately.
+.app {
+  max-width: 480px;
+  margin: auto;
+}
 
-Project maintainers who do not follow or enforce the Code of Conduct in good
-faith may face temporary or permanent repercussions as determined by other
-members of the project's leadership.
+header {
+  text-align: center;
+  padding: 25px 10px;
+  border: 1px solid #a855f7;
+  border-radius: 18px;
+  margin-bottom: 20px;
+  background: linear-gradient(135deg, #190d2b, #090711);
+}
 
-## Attribution
+header h1 {
+  font-size: 32px;
+  color: #d8a5ff;
+  text-shadow: 0 0 15px #a855f7;
+}
 
-This Code of Conduct is adapted from the [Contributor Covenant][homepage], version 1.4,
-available at https://www.contributor-covenant.org/version/1/4/code-of-conduct.html
+header p {
+  color: #c4a5fd;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
 
-[homepage]: https://www.contributor-covenant.org
+.version {
+  display: inline-block;
+  padding: 7px 15px;
+  border-radius: 20px;
+  background: #6d28d9;
+  margin-top: 10px;
+}
 
-For answers to common questions about this code of conduct, see
-https://www.contributor-covenant.org/faq
+.panel {
+  background: #151020;
+  border: 1px solid #663399;
+  border-radius: 15px;
+  padding: 18px;
+  margin-bottom: 16px;
+  box-shadow: 0 0 12px #6b21a855;
+}
+
+.panel h2 {
+  color: #d8b4fe;
+  font-size: 17px;
+  margin-top: 0;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 13px;
+  margin: 8px 0;
+  border: 1px solid #8b5cf6;
+  border-radius: 9px;
+  background: #090711;
+  color: white;
+  outline: none;
+  font-size: 14px;
+}
+
+textarea {
+  min-height: 75px;
+  resize: vertical;
+}
+
+input:focus, textarea:focus {
+  border-color: #e879f9;
+  box-shadow: 0 0 8px #a855f7;
+}
+
+button {
+  border: none;
+  border-radius: 9px;
+  padding: 12px 17px;
+  margin-top: 8px;
+  background: linear-gradient(90deg, #7e22ce, #c026d3);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+button:hover {
+  box-shadow: 0 0 14px #c026d3;
+}
+
+.color-preview {
+  height: 13px;
+  border-radius: 20px;
+  margin-top: 16px;
+  background: linear-gradient(
+    90deg,
+    red, orange, yellow, lime,
+    cyan, blue, violet, red
+  );
+  animation: rainbow 4s linear infinite;
+  background-size: 300%;
+}
+
+@keyframes rainbow {
+  0% { background-position: 0%; }
+  100% { background-position: 300%; }
+}
+
+.rgb-off .color-preview {
+  animation: none;
+  background: #555;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.buttons button {
+  flex: 1;
+}
+
+#stopBtn {
+  background: #991b1b;
+}
+
+.message-list {
+  max-height: 180px;
+  overflow-y: auto;
+  margin-top: 12px;
+}
+
+.message-item {
+  padding: 10px;
+  margin: 7px 0;
+  border-radius: 8px;
+  background: #26163b;
+  border-left: 3px solid #c084fc;
+  overflow-wrap: anywhere;
+}
+
+#status {
+  color: #c084fc;
+  font-size: 13px;
+}
+
+#myList {
+  padding-left: 20px;
+}
+
+#myList li {
+  padding: 8px;
+  background: #26163b;
+  border-radius: 7px;
+  margin: 6px 0;
+  overflow-wrap: anywhere;
+}
+
+.deleteBtn {
+  background: #991b1b;
+  padding: 5px 10px;
+  margin-left: 8px;
+}
+
+footer {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 12px;
+  padding: 20px;
+}
+
+js code
+let rgbEnabled = true;
+let running = false;
+let demoInterval = null;
+let messageCount = 0;
+
+const rgbToggle = document.getElementById("rgbToggle");
+const app = document.querySelector(".app");
+const speed = document.getElementById("speed");
+const speedValue = document.getElementById("speedValue");
+const messageList = document.getElementById("messageList");
+const statusText = document.getElementById("status");
+
+// RGB ON / OFF
+rgbToggle.addEventListener("click", () => {
+  rgbEnabled = !rgbEnabled;
+
+  rgbToggle.textContent = rgbEnabled ? "RGB ON" : "RGB OFF";
+  app.classList.toggle("rgb-off", !rgbEnabled);
+});
+
+// Customizer previews
+function preview(type) {
+  const fields = {
+    vehicle: ["vehicleName", "vehicleResult"],
+    phone: ["phoneText", "phoneResult"],
+    bio: ["bioText", "bioResult"],
+    name: ["nameText", "nameResult"]
+  };
+
+  const [inputId, resultId] = fields[type];
+  const value = document.getElementById(inputId).value.trim();
+
+  if (!value) {
+    alert("Please enter something first!");
+    return;
+  }
+
+  const result = document.getElementById(resultId);
+  result.textContent = value;
+  result.style.color = rgbEnabled ? "#e879f9" : "white";
+}
+
+// Preview speed
+speed.addEventListener("input", () => {
+  speedValue.textContent = "Speed: " + speed.value;
+});
+
+// Local message preview only
+function addMessage() {
+  const text = document.getElementById("spamText").value.trim();
+
+  if (!text) {
+    statusText.textContent = "Status: Enter a message first";
+    stopDemo();
+    return;
+  }
+
+  messageCount++;
+
+  const item = document.createElement("div");
+  item.className = "message-item";
+  item.textContent = messageCount + ". " + text;
+
+  messageList.prepend(item);
+
+  if (messageList.children.length > 30) {
+    messageList.lastElementChild.remove();
+  }
+}
+
+// Start demo
+document.getElementById("startBtn").addEventListener("click", () => {
+  if (running) return;
+
+  const text = document.getElementById("spamText").value.trim();
+
+  if (!text) {
+    alert("Write your message first!");
+    return;
+  }
+
+  running = true;
+  statusText.textContent = "Status: Running preview";
+
+  const delay = 1200 / Number(speed.value);
+
+  addMessage();
+
+  demoInterval = setInterval(() => {
+    if (!running) return;
+    addMessage();
+  }, delay);
+});
+
+// Stop demo
+function stopDemo() {
+  running = false;
+  clearInterval(demoInterval);
+  demoInterval = null;
+  statusText.textContent = "Status: Stopped";
+}
+
+document.getElementById("stopBtn").addEventListener("click", stopDemo);
+
+// Add to list
+document.getElementById("addBtn").addEventListener("click", () => {
+  const input = document.getElementById("listInput");
+  const value = input.value.trim();
+
+  if (!value) {
+    alert("Enter something to add!");
+    return;
+  }
+
+  const li = document.createElement("li");
+  const text = document.createElement("span");
+  text.textContent = value;
+
+  const del = document.createElement("button");
+  del.textContent = "DELETE";
+  del.className = "deleteBtn";
+
+  del.addEventListener("click", () => {
+    li.remove();
+  });
+
+  li.append(text, del);
+  document.getElementById("myList").appendChild(li);
+
+  input.value = "";
+});
+
+// Enter key to add list item
+document.getElementById("listInput").addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    document.getElementById("addBtn").click();
+  }
+});
+
+// Initial setup
+app.classList.remove("rgb-off");
+statusText.textContent = "Status: Stopped";
+
+
+
